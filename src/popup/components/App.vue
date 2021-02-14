@@ -44,6 +44,7 @@
 <script>
   import { version } from '../../../package.json'
   import PuppeteerCodeGenerator from '../../code-generator/PuppeteerCodeGenerator'
+  import TraderCodeGenerator from '../../code-generator/TraderCodeGenerator'
   import PlaywrightCodeGenerator from '../../code-generator/PlaywrightCodeGenerator'
   import RecordingTab from './RecordingTab.vue'
   import ResultsTab from './ResultsTab.vue'
@@ -129,8 +130,10 @@ export default {
 
           const codeGen = new PuppeteerCodeGenerator(codeOptions)
           const codeGenPlaywright = new PlaywrightCodeGenerator(codeOptions)
+          const codeGenTrader = new TraderCodeGenerator(codeOptions)
           this.code = codeGen.generate(this.recording)
           this.codeForPlaywright = codeGenPlaywright.generate(this.recording)
+          this.codeForTrader = codeGenTrader.generate(this.recording)
           this.showResultsTab = true
           this.storeState()
         })

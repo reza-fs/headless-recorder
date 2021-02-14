@@ -21,18 +21,23 @@
 <script>
 export const TYPE = {
   PUPPETEER: 'puppeteer',
-  PLAYWRIGHT: 'playwright'
+  PLAYWRIGHT: 'playwright',
+  TRADER: 'trader'
 }
 
 export default {
   name: 'ResultsTab',
   props: {
     puppeteer: {
-      type: String, 
+      type: String,
       default: ''
     },
     playwright: {
-      type: String, 
+      type: String,
+      default: ''
+    },
+    trader: {
+      type: String,
       default: ''
     },
     options: {
@@ -43,7 +48,7 @@ export default {
   data () {
     return {
       activeTab: TYPE.PUPPETEER,
-      tabs: [TYPE.PUPPETEER, TYPE.PLAYWRIGHT]
+      tabs: [TYPE.PUPPETEER, TYPE.PLAYWRIGHT, TYPE.TRADER]
     }
   },
   mounted() {

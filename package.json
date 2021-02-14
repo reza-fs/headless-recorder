@@ -1,7 +1,7 @@
 {
   "name": "headless-recorder",
   "version": "0.8.1",
-  "description": "A Chrome extension for recording browser interaction and generating Puppeteer & Playwright scripts",
+  "description": "A Chrome extension for recording browser interaction and generating Puppeteer & Playwright scripts (Customized for deriv)",
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development DEBUG=puppeteer-recorder:* webpack --watch",
